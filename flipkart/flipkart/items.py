@@ -10,6 +10,7 @@ import scrapy
 
 class FlipkartItem(scrapy.Item):
     product_name=scrapy.Field()
+    product_tag=scrapy.Field()
     product_url =scrapy.Field()
     product_price=scrapy.Field()
     product_desc=scrapy.Field()
