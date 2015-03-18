@@ -18,6 +18,6 @@ class flipkart_spider(CrawlSpider):
         item = FlipkartItem()
         item['product_url'] = response.url
         item['product_name'] = response.xpath('//h1[@itemprop="name"]/text()').extract()
-        item['product_tag']=response.xpath('//span[@class"subtitle"]/text()').extract()
+        item['product_tag']=response.xpath('//span[@class="subtitle"]/text()').extract()
         item['product_price'] = response.xpath('//span[@class="selling-price omniture-field"]/text()').extract()
         return item
