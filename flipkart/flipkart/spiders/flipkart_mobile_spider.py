@@ -4,10 +4,10 @@ from scrapy.contrib.linkextractors import LinkExtractor
 from flipkart.items import FlipkartItem
 
 class flipkart_spider(CrawlSpider):
-    name='flipkart'
+    name='flipkart_mobile'
     allowed_domains = ['flipkart.com']
     #generating the list of the start url using for loop(start=21*page number)
-    start_urls = ["http://www.flipkart.com/mobiles/pr?sid=tyy,4io&start=%s"%(i*21) for i in range(0,10)]
+    start_urls = ["http://www.flipkart.com/mobiles/pr?sid=tyy,4io&start=%s"%(i*21) for i in range(0,75)]
     rules = (
         Rule(LinkExtractor(allow=('flipkart\.com/\w+-[\w-]+/p/', )), callback='parse_item'),
     )
