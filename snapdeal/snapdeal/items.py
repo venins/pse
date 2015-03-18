@@ -10,6 +10,7 @@ import scrapy
 
 class SnapdealItem(scrapy.Item):
     product_name=scrapy.Field()
+    #product_tag is for subname like black,white or 8gb 16gb etc
     product_tag=scrapy.Field()
     product_url=scrapy.Field()
     product_price=scrapy.Field()
