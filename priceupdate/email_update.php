@@ -3,8 +3,8 @@ error_reporting(-1);
 ini_set('display_errors', 'On');
 $conn = mysqli_connect("localhost", "pse", "pse", "product_data");
 $url = 'https://api.sendgrid.com/';
-$user = 'venins';
-$pass = 'pse@123';
+$user = 'username';
+$pass = 'password';
 $sql = "SELECT url,email,price FROM priceupdate";
 $result = mysqli_query($conn, $sql);
 
